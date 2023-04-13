@@ -72,6 +72,6 @@ jobs:
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull lyganin/infra_actions:latest
-          #  остановка всех контейнеров
+          # остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 lyganin/infra_actions:latest
